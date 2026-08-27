@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana Front-end | Dia 01: Construindo uma Landing Page no Mundo Invertido com HTML e CSS</title>
+
+    <!-- Importação dos Ícones do Google (Material Symbols) -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ==========================================================================
+       1. CABEÇALHO (Header)
+       ========================================================================== -->
+    <header class="header">
+        <div class="header__left">
+            <button class="header__icon-btn" aria-label="Menu principal">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <a href="#" class="header__logo">
+                <img src="assets/img/logo.png" alt="Logo YouTube">
+            </a>
+        </div>
+
+        <div class="header__center">
+            <div class="header__search-box">
+                <input type="text" class="header__search-input" placeholder="Pesquisar">
+                <button class="header__search-btn">
+                    <img src="assets/img/pesquisa.png" alt="Pesquisar">
+                </button>
+            </div>
+        </div>
+
+        <div class="header__right">
+            <button class="header__icon-btn" aria-label="Criar vídeo">
+                <span class="material-symbols-outlined">video_call</span>
+            </button>
+            <button class="header__icon-btn" aria-label="Notificações">
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <img class="header__avatar" src="assets/img/avatar.png" alt="Foto de Perfil">
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       2. ESTRUTURA GLOBAL DA PÁGINA (Grid de Reprodução)
+       ========================================================================== -->
+
+    <!-- Coluna da Esquerda: Área de Reprodução e Detalhes do Vídeo -->
+    <main class="main-content">
+
+        <!-- Player de Vídeo Principal (Simulação) -->
+        <div class="video-player">
+            <div class="video-player__screen">
+                <img class="video-player__screen" src="assets/img/main-video.png" alt="DIO.me">
+            </div>
+        </div>
+
+        <!-- Informações do Vídeo -->
+        <div class="video-details">
+            <h1 class="video-title">Semana Front-end | Dia 01: Construindo uma Landing Page no Mundo Invertido com HTML
+                e CSS</h1>
+
+            <!-- Linha do Canal e Ações do Vídeo (Flexbox) -->
+            <div class="video-channel-row">
+
+                <!-- Bloco do Canal (Esquerda) -->
+                <div class="channel-section">
+                    <img class="channel-section__avatar" src="assets/img/perfil.png" alt="Canal DIO">
+                    <div class="channel-section__info">
+                        <h2 class="channel-section__name">DIO</h2>
+                        <p class="channel-section__subscribers">83,3 mil inscritos</p>
+                    </div>
+                    <button class="channel-section__subscribe-btn">INSCREVA-SE</button>
+                </div>
+
+                <!-- Bloco de Ações (Direita) -->
+                <div class="actions-section">
+                    <!-- Curtidas (Botão Duplo Integrado) -->
+                    <div class="actions-section__like-group">
+                        <button class="actions-section__btn actions-section__btn--like">
+                            <span class="material-symbols-outlined">thumb_up</span>
+                            <span>2 mil</span>
+                        </button>
+                        <button class="actions-section__btn actions-section__btn--dislike">
+                            <span class="material-symbols-outlined">thumb_down</span>
+                        </button>
+                    </div>
+
+                    <button class="actions-section__btn">
+                        <span class="material-symbols-outlined">share</span>
+                        <span>Compartilhar</span>
+                    </button>
+
+                    <button class="actions-section__btn">
+                        <span class="material-symbols-outlined">download</span>
+                        <span>Download</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Caixa de Descrição do Vídeo -->
+            <div class="video-description">
+                <div class="video-description__metadata">
+                    <span class="video-description__views">28.418 visualizações</span>
+                    <span class="video-description__date">Transmitido ao vivo em 23 de ago. de 2022</span>
+                </div>
+                <p class="video-description__text">
+                    Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS. Para isso, criaremos uma landing
+                    page com a temática da série Stranger Things, a qual contará com a implementação de um theme
+                    switcher (light e dark) para explorarmos os mistérios do mundo invertido.
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Coluna da Direita: Lista de Vídeos Recomendados (Relacionados) -->
+    <aside class="sidebar-related">
+
+        <!-- Cartão de Vídeo Recomendado 1 -->
+        <article class="related-card">
+            <a href="#" class="related-card__thumbnail-container">
+                <img class="related-card__thumbnail"
+                    src="https://images.unsplash.com/photo-1618401471353-b98aedd07871?w=320&auto=format&fit=crop&q=60"
+                    alt="Miniatura de vídeo">
+                <span class="related-card__duration">18:42</span>
+            </a>
+            <div class="related-card__info">
+                <h3 class="related-card__title">Geração Tech Unimed - BH - Ciência de Dados</h3>
+                <p class="related-card__channel">DigitalInnovationOne</p>
+                <div class="related-card__metadata">
+                    <span>2,1 mil visualizações</span>
+                    <span>•</span>
+                    <span>Transmitido há 2 dias</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Cartão de Vídeo Recomendado 2 -->
+        <article class="related-card">
+            <a href="#" class="related-card__thumbnail-container">
+                <img class="related-card__thumbnail"
+                    src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=320&auto=format&fit=crop&q=60"
+                    alt="Miniatura de vídeo">
+                <span class="related-card__duration">24:15</span>
+            </a>
+            <div class="related-card__info">
+                <h3 class="related-card__title">Scrum Talks - Metodologia Ágil e Prática</h3>
+                <p class="related-card__channel">DigitalInnovationOne</p>
+                <div class="related-card__metadata">
+                    <span>1,6 mil visualizações</span>
+                    <span>•</span>
+                    <span>Transmitido há 3 dias</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Cartão de Vídeo Recomendado 3 -->
+        <article class="related-card">
+            <a href="#" class="related-card__thumbnail-container">
+                <img class="related-card__thumbnail"
+                    src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=320&auto=format&fit=crop&q=60"
+                    alt="Miniatura de vídeo">
+                <span class="related-card__duration">32:10</span>
+            </a>
+            <div class="related-card__info">
+                <h3 class="related-card__title">Machine Learning Avançado - Fast Track</h3>
+                <p class="related-card__channel">DigitalInnovationOne</p>
+                <div class="related-card__metadata">
+                    <span>1,7 mil visualizações</span>
+                    <span>•</span>
+                    <span>Transmitido há 4 dias</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Cartão de Vídeo Recomendado 4 -->
+        <article class="related-card">
+            <a href="#" class="related-card__thumbnail-container">
+                <img class="related-card__thumbnail"
+                    src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=320&auto=format&fit=crop&q=60"
+                    alt="Miniatura de vídeo">
+                <span class="related-card__duration">45:00</span>
+            </a>
+            <div class="related-card__info">
+                <h3 class="related-card__title">Global Skills #2 - Project Planning e Execução</h3>
+                <p class="related-card__channel">DigitalInnovationOne</p>
+                <div class="related-card__metadata">
+                    <span>971 visualizações</span>
+                    <span>•</span>
+                    <span>Transmitido há 5 dias</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Cartão de Vídeo Recomendado 5 -->
+        <article class="related-card">
+            <a href="#" class="related-card__thumbnail-container">
+                <img class="related-card__thumbnail"
+                    src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=320&auto=format&fit=crop&q=60"
+                    alt="Miniatura de vídeo">
+                <span class="related-card__duration">1:15:30</span>
+            </a>
+            <div class="related-card__info">
+                <h3 class="related-card__title">Como aprender a programar Python do ZERO</h3>
+                <p class="related-card__channel">DigitalInnovationOne</p>
+                <div class="related-card__metadata">
+                    <span>711 visualizações</span>
+                    <span>•</span>
+                    <span>Transmitido há 6 dias</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Cartão de Vídeo Recomendado 6 (Repetição para preencher scrollbar) -->
+        <article class="related-card">
+            <a href="#" class="related-card__thumbnail-container">
+                <img class="related-card__thumbnail"
+                    src="https://images.unsplash.com/photo-1618401471353-b98aedd07871?w=320&auto=format&fit=crop&q=60"
+                    alt="Miniatura de vídeo">
+                <span class="related-card__duration">18:42</span>
+            </a>
+            <div class="related-card__info">
+                <h3 class="related-card__title">Geração Tech Unimed - BH - Ciência de Dados</h3>
+                <p class="related-card__channel">DigitalInnovationOne</p>
+                <div class="related-card__metadata">
+                    <span>2,1 mil visualizações</span>
+                    <span>•</span>
+                    <span>Transmitido há 2 dias</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Cartão de Vídeo Recomendado 7 -->
+        <article class="related-card">
+            <a href="#" class="related-card__thumbnail-container">
+                <img class="related-card__thumbnail"
+                    src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=320&auto=format&fit=crop&q=60"
+                    alt="Miniatura de vídeo">
+                <span class="related-card__duration">24:15</span>
+            </a>
+            <div class="related-card__info">
+                <h3 class="related-card__title">Scrum Talks - Metodologia Ágil e Prática</h3>
+                <p class="related-card__channel">DigitalInnovationOne</p>
+                <div class="related-card__metadata">
+                    <span>1,6 mil visualizações</span>
+                    <span>•</span>
+                    <span>Transmitido há 3 dias</span>
+                </div>
+            </div>
+        </article>
+
+    </aside>
+
+</body>
+
+</html>
